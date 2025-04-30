@@ -1,4 +1,4 @@
-# Assignment 1: Using virtual environment
+las# Assignment 1: Using virtual environment
 
 ### Ensure you have python installed
 
