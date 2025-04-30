@@ -1,4 +1,4 @@
-# I will teach you guys how to perform a phishing attack
+# I will teach you guys how to perform a phishing attack - 😭😭😆
 
 # I added request in import to know the method requested by
 # the client.
@@ -40,13 +40,14 @@ def kunwariLogin():
 # the key is `task`) in tasks
 # render the html
 # visit todo.html to see the html code
-# tasks = []
-# @app.route('/todo', methods=['GET', 'POST'])
-# def todo():
-#     if request.method == "POST":
-#         ...
-
-#     return render_template("todo.html", tasks=tasks)
+tasks = []
+@app.route('/todo', methods=['GET', 'POST'])
+def todo():
+    if request.method == "POST":
+        task = request.form.get("task")
+        if task:
+            tasks.append(task)
+    return render_template("todo.html", tasks=tasks)
 
    
 

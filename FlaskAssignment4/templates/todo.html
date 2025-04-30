@@ -22,5 +22,10 @@
         that would render all previous tasks provided by the
         client.
     -->
+    {% for task in tasks %}
+        <li>{{ task }}</li>
+    {% endfor %}
 </ul>
+
+<button><a href="/">Go Back</a></button>
 {% endblock %}
