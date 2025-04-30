@@ -10,6 +10,8 @@ import bcrypt # pip install bcrypt
 import base64
 import hashlib
 
+from config import SECRET_KEY
+
 # TODO 1: initialize SQLite for this app with the db name of user.db
 # Follow the 'https://cs50.readthedocs.io/libraries/cs50/python/' docs and look for sqlite `SQL` method
 db = cs50.SQL("sqlite:///user.db")
@@ -20,7 +22,7 @@ app = Flask(__name__)
 # python -c 'import secrets; print(secrets.token_hex())'
 # Place the output as the value for app.secret_key
 # We need the secret key to make our server-side session secure
-app.secret_key = '83d8d3bd8d2a8ccddf605ea637be6e70f25150b0d3c54fd1962b4f555cfcc883'
+app.secret_key = SECRET_KEY # still working, ey
 
 @app.route('/')
 def home():

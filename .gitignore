@@ -1,2 +1,5 @@
 **/.venv
 **/requirements.txt
+
+# store secret key here cause nagfa-flag siya saking email lol
+config.py 
